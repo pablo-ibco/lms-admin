@@ -1,0 +1,13 @@
+version: '3.2'
+
+services:
+  lms-web:
+    container_name: lms-web
+    restart: always
+    image: lms-img
+    ports:
+      - 3001:80
+    build:
+      context: ./
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
